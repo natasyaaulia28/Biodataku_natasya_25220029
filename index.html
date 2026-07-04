@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biodataku - Personal Web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BLOCK: HEADER + HERO JADI SATU -->
+  <div class="top-block">
+    <header>
+      <div class="logo">Biodataku</div>
+      <nav>
+        <ul>
+          <li><a href="#hero">Hai!</a></li>
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#softskill">Softskill</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+          <li><a href="#kontak" class="btn-nav">Selengkapnya</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="avatar">
+        <img src="natasya.jpg" alt="Foto profil">
+      </div>
+      <h1 class="dynamic-text"><span id="dynamicText"></span></h1>
+      <p class="subtitle">Salam hangat dari &ldquo;Natasya Aulia Ramadhani Butar-Butar&rdquo; dan semoga kamu sehat selalu</p>
+      <button class="btn-yellow">Selengkapnya</button>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section container">
+    <h2 class="section-title" style="text-align:left; margin-left:8px;">Cerita Singkat tentangku</h2>
+    <div class="about-flex">
+      <div class="avatar-round">
+        <img src="natasya.jpg" alt="Foto profil">
+      </div>
+      <div class="about-text">
+        <p>Saya adalah seorang mahasiswi Sistem Informasi yang memiliki ketertarikan pada dunia teknologi, desain, dan branding. Saya senang mempelajari hal-hal baru, berpikir secara strategis, serta menciptakan karya yang kreatif dan estetik. Bagi saya, setiap proses adalah kesempatan untuk terus berkembang dan memberikan hasil terbaik.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PENDIDIKAN -->
+  <section class="section container" id="pendidikan">
+    <h2 class="section-title">Riwayat Pendidikan-ku</h2>
+    <div class="card-row">
+      <div class="card">
+        <div class="icon-circle"><img src="icon-sd.png" alt="SD"></div>
+        <h3>Sekolah Dasar</h3>
+        <p>Saya bersekolah dasar di SDN 014688 Sidomukti, Kecamatan Kota Kisaran Barat, Kabupaten Asahan - SUMUT</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><img src="icon-smp.png" alt="SLTP"></div>
+        <h3>Sekolah Menengah Pertama</h3>
+        <p>Saya Bersekolah di MTs Al Ma'shum di Kecamatan Kota Kisaran Barat, Kabupaten Asahan - SUMUT</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle"><img src="icon-sma.png" alt="SLTA"></div>
+        <h3>Sekolah Menengah Atas</h3>
+        <p>Saya Bersekolah di SMK Al Ma'shum di Kecamatan Kota Kisaran Barat, Kabupaten Asahan - SUMUT</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOFTSKILL -->
+  <section class="section container" id="softskill">
+    <h2 class="section-title">Softskiil-ku</h2>
+    <div class="card-row">
+      <div class="card">
+        <div class="icon-square"><img src="icon-2.png" alt="SEO Optimization"></div>
+        <h3>SEO Optimization</h3>
+        <p>SEO adalah upaya mengoptimasi website untuk mendapatkan peringkat teratas di hasil pencarian.
+        Dengan mendapatkan ranking tinggi di hasil pencarian, potensi trafik organik Anda pun meningkat.</p>
+      </div>
+      <div class="card">
+        <div class="icon-square"><img src="icon-3.png" alt="App Development"></div>
+        <h3>App Development</h3>
+        <p>Development adalah salah satu tipe proyek IT yang berfokus pada penciptaan atau pengembangan
+        perangkat lunak. Software Development dapat didetailkan lagi menjadi proses.</p>
+      </div>
+      <div class="card">
+        <div class="icon-square"><img src="icon-4.png" alt="Web Design"></div>
+        <h3>Web Design</h3>
+        <p>Web design adalah suatu kegiatan yang bertujuan untuk merancang aplikasi dan tampilannya
+        dengan basis web menggunakan bahasa pemograman.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK -->
+  <section class="container" id="kontak">
+    <div class="contact-box">
+      <div class="contact-left">
+        <img class="icon-contact" src="video-chat.png" alt="Kontak">
+        <div>
+          <h3>Kontakku</h3>
+          <p>083123438030</p>
+        </div>
+      </div>
+      <button class="btn-contact">Contact Me</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    Copyright : Natasya Aulia R. Butar-Butar | NIM 25220029
+  </footer>
+
+  <script>
+    const teksDinamis = [
+      "Welcome to My Personal Web",
+      "Salam Kenal dari Saya",
+      "Terima Kasih Telah Berkunjung"
+    ];
+
+    const elText = document.getElementById('dynamicText');
+    let index = 0;
+
+    function tampilkanTeks() {
+      elText.style.opacity = 0;
+      setTimeout(() => {
+        elText.textContent = teksDinamis[index];
+        elText.style.opacity = 1;
+        index = (index + 1) % teksDinamis.length;
+      }, 400);
+    }
+
+    tampilkanTeks();
+    setInterval(tampilkanTeks, 3000);
+  </script>
+
+</body>
+</html>
